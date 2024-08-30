@@ -1,0 +1,127 @@
+.outline {
+    outline: 4px solid #211c21;
+    border-bottom: 8px solid #5a595a;
+}
+
+.card {
+    padding: 1rem;
+    background-color: #4a494a;
+    outline: 4px solid #211c21;
+    border-block: 4px solid #5a595a;
+    border-radius: 0;
+}
+
+.navbar {
+    margin-block: 4px;
+    background-color: #ced2d6;
+    outline: 4px solid #e6e3e6;
+    cursor: pointer;
+    color: #000;
+}
+
+.success-outline {
+    outline: 4px solid #211c21;
+    line-height: normal;
+    border-bottom: 8px solid #214d10;
+    padding: 4px;
+    border-radius: 0;
+    display: inline-block;
+}
+.success-core {
+    text-decoration: none;
+    color: #fff;
+    background-color: #3a8529;
+    outline: 4px solid #639e52;
+    cursor: pointer;
+    padding: 0 4px;
+}
+
+.error-outline {
+    outline: 4px solid #211c21;
+    line-height: normal;
+    border-bottom: 8px solid #5c0000;
+    padding: 4px;
+    border-radius: 0;
+    display: inline-block;
+}
+
+.error-core {
+    text-decoration: none;
+    color: #fff;
+    background-color: #d2052b;
+    outline: 4px solid #e05050;
+    cursor: pointer;
+    padding: 0 4px;
+}
+
+.warning-outline {
+    outline: 4px solid #211c21;
+    line-height: normal;
+    border-bottom: 8px solid #cc9901;
+    padding: 4px;
+    border-radius: 0;
+    display: inline-block;
+}
+
+.warning-core {
+    text-decoration: none;
+    color: #fff;
+    background-color: #ffcc00;
+    outline: 4px solid #ffe063;
+    cursor: pointer;
+    padding: 0 4px;
+}
+
+.info-outline {
+    outline: 4px solid #211c21;
+    line-height: normal;
+    border-bottom: 8px solid #0056b3;
+    padding: 4px;
+    border-radius: 0;
+    display: inline-block;
+}
+
+.info-core {
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    outline: 4px solid #5aa9ff;
+    cursor: pointer;
+    padding: 0 4px;
+}
+
+.light-outline {
+    outline: 4px solid #211c21;
+    line-height: normal;
+    border-bottom: 8px solid #0056b3;
+    padding: 4px;
+    border-radius: 0;
+    display: inline-block;
+}
+
+.light-core {
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    outline: 4px solid #5aa9ff;
+    cursor: pointer;
+    padding: 0 4px;
+}
+
+.dark-outline {
+    outline: 4px solid #211c21;
+    line-height: normal;
+    border-bottom: 8px solid #0056b3;
+    padding: 4px;
+    border-radius: 0;
+    display: inline-block;
+}
+
+.dark-core {
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    outline: 4px solid #5aa9ff;
+    cursor: pointer;
+    padding: 0 4px;
+}

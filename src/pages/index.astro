@@ -1,0 +1,67 @@
+---
+import Bootstrap from "../layouts/Bootstrap.astro";
+---
+
+<Bootstrap title="Index">
+  <div class="outline">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <div class="container text-center mt-5">
+    <div class="row row-cols-sm-2 row-cols-1">
+      <div class="col">
+        <div class="card">
+          <div class="card-body">This is some text within a card body.</div>
+        </div>
+      </div>
+      <div class="col">
+        <button type="button" class="btn btn-primary">Primary</button>
+        <button type="button" class="btn btn-secondary">Secondary</button>
+        <div class="success-outline">
+          <a class="success-core">Success</a>
+        </div>
+        <div class="error-outline">
+          <a class="error-core">Errors</a>
+        </div>
+        <div class="warning-outline">
+          <a class="warning-core">Warning</a>
+        </div>
+        <div class="info-outline">
+          <a class="info-core">Info</a>
+        </div>
+        <button type="button" class="btn btn-light">Light</button>
+        <button type="button" class="btn btn-dark">Dark</button>
+      </div>
+    </div>
+  </div>
+</Bootstrap>
