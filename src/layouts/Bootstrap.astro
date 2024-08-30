@@ -4,6 +4,7 @@ interface Props {
 }
 
 const { title } = Astro.props;
+const isDev = import.meta.env.DEV;
 ---
 
 <!doctype html>
@@ -18,7 +19,15 @@ const { title } = Astro.props;
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <link href="/bs-theme.css" rel="stylesheet" />
+    {isDev && <link href="/bs-theme.css" rel="stylesheet" />}
+    {
+      !isDev && (
+        <link
+          href="https://democraftmc.github.io/ore-aui//bs-theme.css"
+          rel="stylesheet"
+        />
+      )
+    }
   </head>
   <body>
     <slot />
