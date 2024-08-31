@@ -1,3 +1,47 @@
+/*
+DOC
+*/
+
+@font-face {
+  font-family: "Monocraft";
+  src: local("Monocraft"), url("Monocraft.woff2") format("woff2"),
+    url("Monocraft.woff") format("woff"),
+    url("Monocraft.ttf") format("truetype");
+  font-weight: normal;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Minecraft Ten";
+  src: url("MinecraftTenv2-Regular.woff2") format("woff2"),
+    url("MinecraftTenv2-Regular.woff") format("woff"),
+    url("MinecraftTenv2-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Minecraft Five";
+  src: url("MinecraftFivev2-Bold.woff2") format("woff2"),
+    url("MinecraftFivev2-Bold.woff") format("woff"),
+    url("MinecraftFivev2-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Minecraft Five";
+  src: url("MinecraftFivev2-Regular.woff2") format("woff2"),
+    url("MinecraftFivev2-Regular.woff") format("woff"),
+    url("MinecraftFivev2-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --white-light: #e6e3e6;
   --white-tone: #ced2d6;
@@ -30,11 +74,16 @@
   --base-dark: #5a595a;
   --inverted-tone: #4a494a;
 
+  --font-sans-serif: "Minecraft Five", system-ui, -apple-system, "Segoe UI",
+    Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-monospace: "Minecraft Ten", SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
   --bs-border-radius: 0;
-}
-
-body {
-  background-color: var(--inverted-tone);
+  --bs-font-sans-serif: "Monocraft", system-ui, -apple-system, "Segoe UI",
+    Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-link-hover-color-rgb: var(--base-light);
 }
 
 .dark {
@@ -45,19 +94,62 @@ body {
   --font: #ced2d6;
 }
 
+.btn-close {
+  --bs-btn-close-bg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M5 5h2v2H5zm4 4H7V7h2zm2 2H9V9h2zm2 0h-2v2H9v2H7v2H5v2h2v-2h2v-2h2v-2h2v2h2v2h2v2h2v-2h-2v-2h-2v-2h-2zm2-2v2h-2V9zm2-2v2h-2V7zm0 0V5h2v2z' /%3E%3C/svg%3E");
+}
+
+.modal-title {
+  font-family: var(--font-sans-serif);
+  font-size: 2rem;
+  color: var(--font);
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-danger,
+.btn-warning,
+.btn-info,
+.btn-dark,
+.btn-light,
+.btn:hover {
+  --bs-btn-color: none;
+  --bs-btn-bg: none;
+  --bs-btn-border-color: none;
+  --bs-btn-hover-color: none;
+  --bs-btn-hover-bg: unset;
+  --bs-btn-hover-border-color: none;
+  --bs-btn-focus-shadow-rgb: none;
+  --bs-btn-active-color: none;
+  --bs-btn-active-bg: none;
+  --bs-btn-active-border-color: #none;
+  --bs-btn-active-shadow: none;
+  --bs-btn-disabled-color: none;
+  --bs-btn-disabled-bg: none;
+  --bs-btn-disabled-border-color: none;
+  box-shadow: none;
+}
+
+body {
+  background-color: var(--inverted-tone);
+}
+
 .outline {
   outline: 4px solid var(--outline);
   border-bottom: 8px solid var(--base-dark);
 }
 
 .card,
-.alert {
+.alert,
+.dropdown-menu {
   padding: 1rem;
   background-color: var(--base-tone);
   outline: 4px solid var(--outline);
   border-block: 4px solid var(--base-light);
   border-radius: 0;
   box-shadow: none;
+  color: var(--font);
+  --bs-dropdown-border-color: none;
+  --bs-dropdown-link-hover-bg: var(--base-light);
 }
 
 .modal-content {
@@ -81,6 +173,8 @@ body {
   margin-right: 4px;
   margin-top: 4px;
   --bs-accordion-inner-border-radius: 0;
+  --bs-accordion-btn-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 24 24'%3E%3Cpath fill='currentColor' d='M7 8H5v2h2v2h2v2h2v2h2v-2h2v-2h2v-2h2V8h-2v2h-2v2h-2v2h-2v-2H9v-2H7z' /%3E%3C/svg%3E");
+  --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 24 24'%3E%3Cpath fill='currentColor' d='M7 8H5v2h2v2h2v2h2v2h2v-2h2v-2h2v-2h2V8h-2v2h-2v2h-2v2h-2v-2H9v-2H7z' /%3E%3C/svg%3E");
 }
 
 .accordion-button {
@@ -88,6 +182,8 @@ body {
   outline: 4px solid var(--base-light);
   color: var(--font);
   border-radius: 0;
+  font-family: var(--font-sans-serif);
+  font-size: 2rem;
 }
 
 .accordion-button:focus {
@@ -128,6 +224,7 @@ body {
   padding: 4px;
   border-radius: 0;
   display: inline-block;
+  background-color: var(--success-light);
 }
 .btn-success,
 .btn-primary {
@@ -137,6 +234,14 @@ body {
   outline: 4px solid var(--success-light);
   cursor: pointer;
   padding: 0 4px;
+}
+
+.btn-success:hover,
+.btn-primary:hover,
+.btn-success:focus,
+.btn-primary:focus {
+  background-color: var(--success-tone);
+  color: var(--font);
 }
 
 .card-success,
@@ -158,6 +263,7 @@ body {
   padding: 4px;
   border-radius: 0;
   display: inline-block;
+  background-color: var(--danger-light);
 }
 
 .btn-danger {
@@ -187,6 +293,7 @@ body {
   padding: 4px;
   border-radius: 0;
   display: inline-block;
+  background-color: var(--warning-light);
 }
 
 .btn-warning {
@@ -216,6 +323,7 @@ body {
   padding: 4px;
   border-radius: 0;
   display: inline-block;
+  background-color: var(--info-light);
 }
 
 .btn-info {
@@ -245,6 +353,7 @@ body {
   padding: 4px;
   border-radius: 0;
   display: inline-block;
+  background-color: var(--black-light);
 }
 .btn-dark,
 .btn-secondary {
@@ -268,7 +377,6 @@ body {
   color: var(--white-tone);
 }
 
-
 .outline-light {
   outline: 4px solid var(--outline);
   line-height: normal;
@@ -276,6 +384,7 @@ body {
   padding: 4px;
   border-radius: 0;
   display: inline-block;
+  background-color: var(--white-light);
 }
 .btn-light {
   text-decoration: none;
@@ -295,5 +404,5 @@ body {
   outline: 4px solid var(--outline);
   border-block: 4px solid var(--white-light);
   border-radius: 0;
+  color: var(--black-tone);
 }
-
