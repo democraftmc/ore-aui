@@ -1,0 +1,296 @@
+---
+import Bootstrap from "../layouts/Bootstrap.astro";
+import Form from "../components/Form.astro";
+---
+
+<Bootstrap title="Index" theme="light">
+  <div class="outline">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">Dark Theme</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul
+            class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
+            style="--bs-scroll-height: 100px;">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Link
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" aria-disabled="true">Link</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <div class="container text-center mt-5 mb-5">
+    <div class="row row-cols-sm-2 row-cols-1">
+      <div class="col">
+        <div class="card">
+          <div class="card-body">This is some text within a card body.</div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="outline-info">
+          <a class="btn-info">Info</a>
+        </div>
+        <div class="outline-success">
+          <a class="btn-success">success</a>
+        </div>
+        <div class="outline-danger">
+          <a class="btn-danger">error</a>
+        </div>
+        <div class="outline-warning">
+          <a class="btn-warning">warn</a>
+        </div>
+        <div class="outline-light">
+          <a class="btn-light">light</a>
+        </div>
+        <div class="outline-dark">
+          <a class="btn-dark">Dark</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="margin: 3rem;">
+    <div class="alert alert-success" role="alert">
+      A simple success alert—check it out!
+    </div>
+    <div class="alert alert-danger" role="alert">
+      A simple danger alert—check it out!
+    </div>
+    <div class="alert alert-warning" role="alert">
+      A simple warning alert—check it out!
+    </div>
+    <div class="alert alert-info" role="alert">
+      A simple info alert—check it out!
+    </div>
+    <div class="alert alert-light" role="alert">
+      A simple light alert—check it out!
+    </div>
+    <div class="alert alert-dark" role="alert">
+      A simple dark alert—check it out!
+    </div>
+    <div class="outline">
+      <div class="accordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseOne"
+              aria-expanded="false"
+              aria-controls="collapseOne">
+              Accordion Item #1
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <strong>This is the first item's accordion body.</strong> It is shown
+              by default, until the collapse plugin adds the appropriate classes
+              that we use to style each element. These classes control the overall
+              appearance, as well as the showing and hiding via CSS transitions.
+              You can modify any of this with custom CSS or overriding our default
+              variables. It's also worth noting that just about any HTML can go within
+              the <code>.accordion-body</code>, though the transition does limit
+              overflow.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="outline mt-3">
+      <div class="accordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo"
+              aria-expanded="false"
+              aria-controls="collapseTwo">
+              Accordion Item #2
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <strong>This is the first item's accordion body.</strong> It is shown
+              by default, until the collapse plugin adds the appropriate classes
+              that we use to style each element. These classes control the overall
+              appearance, as well as the showing and hiding via CSS transitions.
+              You can modify any of this with custom CSS or overriding our default
+              variables. It's also worth noting that just about any HTML can go within
+              the <code>.accordion-body</code>, though the transition does limit
+              overflow.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Button trigger modal -->
+    <div class="outline-success mt-3">
+      <button
+        type="button"
+        class="btn btn-primary"
+        data-bs-toggle="modal"
+        data-bs-target="#staticBackdrop">
+        Launch static backdrop modal
+      </button>
+    </div>
+    <div class="outline-success mt-3">
+      <button type="button" class="btn btn-primary" id="liveToastBtn"
+        >Show live toast</button
+      >
+    </div>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="staticBackdrop"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="outline">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                Modal title
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"></button>
+            </div>
+            <div class="modal-body">...</div>
+            <div class="modal-footer">
+              <div class="outline-dark">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal">Close</button
+                >
+              </div>
+              <div class="outline-success">
+                <button type="button" class="btn btn-primary">Understood</button
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="toast-container position-fixed top-0 end-0 p-3">
+      <div
+        id="liveToast"
+        class="toast"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true">
+        <div class="toast-header">
+          <!--img src="..." class="rounded me-2" alt="..." /-->
+          <strong class="me-auto">Bootstrap</strong>
+          <small>11 mins ago</small>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="toast"
+            aria-label="Close"></button>
+        </div>
+        <div class="toast-body">Hello, world! This is a toast message.</div>
+      </div>
+    </div>
+  </div>
+  <div style="margin-left: 3rem; margin-right: 3rem;">
+    <div
+      class="progress mb-2"
+      role="progressbar"
+      aria-label="Basic example"
+      aria-valuenow="25"
+      aria-valuemin="0"
+      aria-valuemax="100">
+      <div class="progress-bar" style="width: 25%"></div>
+    </div>
+    <div
+      class="progress mb-2"
+      role="progressbar"
+      aria-label="Basic example"
+      aria-valuenow="50"
+      aria-valuemin="0"
+      aria-valuemax="100">
+      <div class="progress-bar" style="width: 50%"></div>
+    </div>
+  </div>
+
+  <div style="margin-left: 3rem; margin-right: 3rem;">
+    <div class="spinner-border" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+    <div class="spinner-grow text-primary" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+    <div class="spinner-grow text-secondary" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+    <div class="spinner-grow text-success" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+    <div class="spinner-grow text-danger" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+    <div class="spinner-grow text-warning" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+    <div class="spinner-grow text-info" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+    <div class="spinner-grow text-light" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+    <div class="spinner-grow text-dark" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+
+  <div class="card" style="margin: 6rem;">
+    <div class="card-body"><Form /></div>
+  </div>
+</Bootstrap>

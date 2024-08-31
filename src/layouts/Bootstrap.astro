@@ -1,9 +1,10 @@
 ---
 interface Props {
   title: string;
+  theme: string;
 }
 
-const { title } = Astro.props;
+const { title, theme } = Astro.props;
 const isDev = import.meta.env.DEV;
 ---
 
@@ -20,13 +21,11 @@ const isDev = import.meta.env.DEV;
       crossorigin="anonymous"
     />
     <link href="/bs-theme.css" rel="stylesheet" />
-
   </head>
-  <body class="dark">
+  <body class={theme}>
     <slot />
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"></script>
   </body>
 </html>
