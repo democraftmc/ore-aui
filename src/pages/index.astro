@@ -18,18 +18,35 @@ import Bootstrap from "../layouts/Bootstrap.astro";
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
+          <ul
+            class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
+            style="--bs-scroll-height: 100px;">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Features</a>
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Link
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Pricing</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+              <a class="nav-link disabled" aria-disabled="true">Link</a>
             </li>
           </ul>
         </div>
@@ -86,7 +103,7 @@ import Bootstrap from "../layouts/Bootstrap.astro";
       A simple dark alert—check it out!
     </div>
     <div class="outline">
-      <div class="accordion" id="accordionExample">
+      <div class="accordion">
         <div class="accordion-item">
           <h2 class="accordion-header">
             <button
@@ -94,15 +111,41 @@ import Bootstrap from "../layouts/Bootstrap.astro";
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapseOne"
-              aria-expanded="true"
+              aria-expanded="false"
               aria-controls="collapseOne">
               Accordion Item #1
             </button>
           </h2>
-          <div
-            id="collapseOne"
-            class="accordion-collapse collapse show"
-            data-bs-parent="#accordionExample">
+          <div id="collapseOne" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <strong>This is the first item's accordion body.</strong> It is shown
+              by default, until the collapse plugin adds the appropriate classes
+              that we use to style each element. These classes control the overall
+              appearance, as well as the showing and hiding via CSS transitions.
+              You can modify any of this with custom CSS or overriding our default
+              variables. It's also worth noting that just about any HTML can go within
+              the <code>.accordion-body</code>, though the transition does limit
+              overflow.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="outline mt-3">
+      <div class="accordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo"
+              aria-expanded="false"
+              aria-controls="collapseTwo">
+              Accordion Item #2
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse">
             <div class="accordion-body">
               <strong>This is the first item's accordion body.</strong> It is shown
               by default, until the collapse plugin adds the appropriate classes
@@ -118,13 +161,15 @@ import Bootstrap from "../layouts/Bootstrap.astro";
       </div>
     </div>
     <!-- Button trigger modal -->
-    <button
-      type="button"
-      class="btn btn-primary"
-      data-bs-toggle="modal"
-      data-bs-target="#staticBackdrop">
-      Launch static backdrop modal
-    </button>
+    <div class="outline-success mt-3">
+      <button
+        type="button"
+        class="btn btn-primary"
+        data-bs-toggle="modal"
+        data-bs-target="#staticBackdrop">
+        Launch static backdrop modal
+      </button>
+    </div>
 
     <!-- Modal -->
     <div
@@ -150,12 +195,17 @@ import Bootstrap from "../layouts/Bootstrap.astro";
             </div>
             <div class="modal-body">...</div>
             <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-secondary"
-                data-bs-dismiss="modal">Close</button
-              >
-              <button type="button" class="btn btn-primary">Understood</button>
+              <div class="outline-dark">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal">Close</button
+                >
+              </div>
+              <div class="outline-success">
+                <button type="button" class="btn btn-primary">Understood</button
+                >
+              </div>
             </div>
           </div>
         </div>
