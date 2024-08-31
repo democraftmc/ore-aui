@@ -74,14 +74,10 @@ DOC
   --base-dark: #5a595a;
   --bg-tone: #ced2d6;
 
-  --font-interaction: "Minecraft Ten", system-ui, -apple-system, "Segoe UI",
+  --font-interaction: "Minecraft Five", system-ui, -apple-system, "Segoe UI",
     Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --bs-font-monospace: "Minecraft Ten", SFMono-Regular, Menlo, Monaco, Consolas,
-    "Liberation Mono", "Courier New", monospace;
-  --font-sans-serif: "Minecraft Five", system-ui, -apple-system, "Segoe UI",
-    Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-sans-serif: var(--bs-font-sans-serif);
   --bs-font-monospace: "Minecraft Ten", SFMono-Regular, Menlo, Monaco, Consolas,
     "Liberation Mono", "Courier New", monospace;
   --bs-border-radius: 0;
@@ -144,6 +140,11 @@ body {
   background-color: var(--bg-tone);
 }
 
+.toast-header {
+  font-family: var(--font-interaction);
+  color: var(--font)
+}
+
 .outline {
   outline: 4px solid var(--outline);
   border-bottom: 8px solid var(--base-dark);
@@ -151,7 +152,8 @@ body {
 
 .card,
 .alert,
-.dropdown-menu {
+.dropdown-menu,
+.toast {
   padding: 1rem;
   background-color: var(--base-tone);
   outline: 4px solid var(--outline);
@@ -161,6 +163,8 @@ body {
   color: var(--font);
   --bs-dropdown-border-color: none;
   --bs-dropdown-link-hover-bg: var(--base-light);
+  --bs-toast-border-color: none;
+  --bs-toast-header-bg: var(--base-light);
 }
 
 .modal-content {
