@@ -5,6 +5,7 @@
   --black-light: #5a595a;
   --black-tone: #4a494a;
   --black-dark: #2e2e2e;
+  --font: #2e2e2e;
 
   --outline: #211c21;
 
@@ -27,11 +28,21 @@
   --base-light: #e6e3e6;
   --base-tone: #ced2d6;
   --base-dark: #5a595a;
+  --inverted-tone: #4a494a;
+
+  --bs-border-radius: 0;
 }
+
+body {
+  background-color: var(--inverted-tone);
+}
+
 .dark {
   --base-light: #5a595a;
   --base-tone: #4a494a;
+  --inverted-tone: #ced2d6;
   --base-dark: #2e2e2e;
+  --font: #ced2d6;
 }
 
 .outline {
@@ -40,20 +51,66 @@
 }
 
 .card,
-.alert,
-.modal {
+.alert {
   padding: 1rem;
   background-color: var(--base-tone);
   outline: 4px solid var(--outline);
   border-block: 4px solid var(--base-light);
   border-radius: 0;
+  box-shadow: none;
+}
+
+.modal-content {
+  text-decoration: none;
+  color: var(--font);
+  background-color: var(--base-tone);
+  cursor: pointer;
+  border: none;
+  padding: 0 4px;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.accordion {
+  background-color: var(--base-tone);
+  outline: 4px solid var(--base-tone);
+  border-block: 4px solid var(--base-light);
+  border-radius: 0;
+  box-shadow: none;
+  margin-left: 4px;
+  margin-right: 4px;
+  margin-top: 4px;
+  --bs-accordion-inner-border-radius: 0;
+}
+
+.accordion-button {
+  background-color: var(--base-tone);
+  outline: 4px solid var(--base-light);
+  color: var(--font);
+  border-radius: 0;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+  outline: 4px solid var(--base-tone);
 }
 
 .accordion-item {
+  border: 0;
+}
+
+.accordion-button:not(.collapsed) {
   background-color: var(--base-tone);
-  outline: 4px solid var(--outline);
-  border-block: 4px solid var(--base-light);
+  outline: 4px solid var(--base-light);
+  color: var(--font);
   border-radius: 0;
+  box-shadow: none;
+}
+
+.accordion-body {
+  border-radius: 0;
+  background-color: var(--base-dark);
+  color: var(--font);
 }
 
 .navbar {
@@ -61,7 +118,7 @@
   background-color: var(--base-tone);
   outline: 4px solid var(--base-light);
   cursor: pointer;
-  color: #000;
+  color: var(--font);
 }
 
 .outline-success {
@@ -72,9 +129,10 @@
   border-radius: 0;
   display: inline-block;
 }
-.btn-success {
+.btn-success,
+.btn-primary {
   text-decoration: none;
-  color: #fff;
+  color: var(--font);
   background-color: var(--success-tone);
   outline: 4px solid var(--success-light);
   cursor: pointer;
@@ -83,13 +141,14 @@
 
 .card-success,
 .alert-success,
-.modal-sucess,
+.modal-content-sucess,
 .accordion-success {
   padding: 1rem;
   background-color: var(--success-tone);
   outline: 4px solid var(--outline);
   border-block: 4px solid var(--success-light);
   border-radius: 0;
+  color: var(--base-tone);
 }
 
 .outline-danger {
@@ -112,7 +171,7 @@
 
 .card-danger,
 .alert-danger,
-.modal-danger,
+.modal-content-danger,
 .accordion-danger {
   padding: 1rem;
   background-color: var(--danger-tone);
@@ -141,7 +200,7 @@
 
 .card-warning,
 .alert-warning,
-.modal-warning,
+.modal-content-warning,
 .accordion-warning {
   padding: 1rem;
   background-color: var(--warning-tone);
@@ -170,7 +229,7 @@
 
 .card-info,
 .alert-info,
-.modal-info,
+.modal-content-info,
 .accordion-info {
   padding: 1rem;
   background-color: var(--info-tone);
@@ -187,7 +246,8 @@
   border-radius: 0;
   display: inline-block;
 }
-.btn-dark {
+.btn-dark,
+.btn-secondary {
   text-decoration: none;
   color: #fff;
   background-color: var(--black-tone);
@@ -198,13 +258,14 @@
 
 .card-dark,
 .alert-dark,
-.modal-dark,
+.modal-content-dark,
 .accordion-dark {
   padding: 1rem;
   background-color: var(--black-tone);
   outline: 4px solid var(--outline);
   border-block: 4px solid var(--black-light);
   border-radius: 0;
+  color: var(--white-tone);
 }
 
 
@@ -218,7 +279,7 @@
 }
 .btn-light {
   text-decoration: none;
-  color: #fff;
+  color: var(--white-dark);
   background-color: var(--white-tone);
   outline: 4px solid var(--white-light);
   cursor: pointer;
@@ -227,7 +288,7 @@
 
 .card-light,
 .alert-light,
-.modal-light,
+.modal-content-light,
 .accordion-light {
   padding: 1rem;
   background-color: var(--white-tone);
