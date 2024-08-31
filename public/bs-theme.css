@@ -72,8 +72,13 @@ DOC
   --base-light: #e6e3e6;
   --base-tone: #ced2d6;
   --base-dark: #5a595a;
-  --inverted-tone: #4a494a;
+  --bg-tone: #ced2d6;
 
+  --font-interaction: "Minecraft Ten", system-ui, -apple-system, "Segoe UI",
+    Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-monospace: "Minecraft Ten", SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
   --font-sans-serif: "Minecraft Five", system-ui, -apple-system, "Segoe UI",
     Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -89,7 +94,7 @@ DOC
 .dark {
   --base-light: #5a595a;
   --base-tone: #4a494a;
-  --inverted-tone: #ced2d6;
+  --bg-tone: #5a595a;
   --base-dark: #2e2e2e;
   --font: #ced2d6;
 }
@@ -109,6 +114,7 @@ DOC
 .btn-danger,
 .btn-warning,
 .btn-info,
+.btn-success,
 .btn-dark,
 .btn-light,
 .btn:hover {
@@ -127,10 +133,15 @@ DOC
   --bs-btn-disabled-bg: none;
   --bs-btn-disabled-border-color: none;
   box-shadow: none;
+  font-family: var(--font-interaction);
+  color: #ced2d6;
+  cursor: pointer;
+  padding: 0 4px;
+  text-decoration: none;
 }
 
 body {
-  background-color: var(--inverted-tone);
+  background-color: var(--bg-tone);
 }
 
 .outline {
@@ -165,7 +176,6 @@ body {
 
 .accordion {
   background-color: var(--base-tone);
-  outline: 4px solid var(--base-tone);
   border-block: 4px solid var(--base-light);
   border-radius: 0;
   box-shadow: none;
@@ -182,7 +192,7 @@ body {
   outline: 4px solid var(--base-light);
   color: var(--font);
   border-radius: 0;
-  font-family: var(--font-sans-serif);
+  font-family: var(--font-interaction);
   font-size: 2rem;
 }
 
@@ -205,7 +215,7 @@ body {
 
 .accordion-body {
   border-radius: 0;
-  background-color: var(--base-dark);
+  background-color: var(--base-tone);
   color: var(--font);
 }
 
@@ -228,12 +238,8 @@ body {
 }
 .btn-success,
 .btn-primary {
-  text-decoration: none;
-  color: var(--font);
   background-color: var(--success-tone);
   outline: 4px solid var(--success-light);
-  cursor: pointer;
-  padding: 0 4px;
 }
 
 .btn-success:hover,
@@ -267,12 +273,8 @@ body {
 }
 
 .btn-danger {
-  text-decoration: none;
-  color: #fff;
   background-color: var(--danger-tone);
   outline: 4px solid var(--danger-light);
-  cursor: pointer;
-  padding: 0 4px;
 }
 
 .card-danger,
@@ -297,12 +299,9 @@ body {
 }
 
 .btn-warning {
-  text-decoration: none;
-  color: #fff;
+  color: var(--white-dark);
   background-color: var(--warning-tone);
   outline: 4px solid var(--warning-light);
-  cursor: pointer;
-  padding: 0 4px;
 }
 
 .card-warning,
@@ -314,6 +313,7 @@ body {
   outline: 4px solid var(--outline);
   border-block: 4px solid var(--warning-light);
   border-radius: 0;
+  color: var(--white-dark);
 }
 
 .outline-info {
@@ -327,12 +327,8 @@ body {
 }
 
 .btn-info {
-  text-decoration: none;
-  color: #fff;
   background-color: var(--info-tone);
   outline: 4px solid var(--info-light);
-  cursor: pointer;
-  padding: 0 4px;
 }
 
 .card-info,
@@ -357,12 +353,8 @@ body {
 }
 .btn-dark,
 .btn-secondary {
-  text-decoration: none;
-  color: #fff;
   background-color: var(--black-tone);
   outline: 4px solid var(--black-light);
-  cursor: pointer;
-  padding: 0 4px;
 }
 
 .card-dark,
@@ -387,12 +379,10 @@ body {
   background-color: var(--white-light);
 }
 .btn-light {
-  text-decoration: none;
   color: var(--white-dark);
   background-color: var(--white-tone);
   outline: 4px solid var(--white-light);
-  cursor: pointer;
-  padding: 0 4px;
+  
 }
 
 .card-light,
