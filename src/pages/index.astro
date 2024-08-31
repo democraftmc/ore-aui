@@ -293,4 +293,17 @@ import Form from "../components/Form.astro";
   <div class="card" style="margin: 6rem;">
     <div class="card-body"><Form /></div>
   </div>
+
+  <script is:inline>
+    const toastTrigger = document.getElementById("liveToastBtn");
+    const toastLiveExample = document.getElementById("liveToast");
+
+    if (toastTrigger) {
+      const toastBootstrap =
+        bootstrap.Toast.getOrCreateInstance(toastLiveExample);
+      toastTrigger.addEventListener("click", () => {
+        toastBootstrap.show();
+      });
+    }
+  </script>
 </Bootstrap>
