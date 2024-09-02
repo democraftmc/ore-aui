@@ -161,6 +161,8 @@ body {
   border-radius: 0;
   box-shadow: none;
   color: var(--font);
+  --bs-card-border-color: none;
+  --bs-alert-border-color: none;
   --bs-dropdown-border-color: none;
   --bs-dropdown-link-hover-bg: var(--base-light);
   --bs-toast-border-color: none;
