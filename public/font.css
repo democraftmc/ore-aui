@@ -1,0 +1,39 @@
+@font-face {
+  font-family: "Monocraft";
+  src: local("Monocraft"), url("Monocraft.woff2") format("woff2"),
+    url("Monocraft.woff") format("woff"),
+    url("Monocraft.ttf") format("truetype");
+  font-weight: normal;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Minecraft Ten";
+  src: url("MinecraftTenv2-Regular.woff2") format("woff2"),
+    url("MinecraftTenv2-Regular.woff") format("woff"),
+    url("MinecraftTenv2-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Minecraft Five";
+  src: url("MinecraftFivev2-Bold.woff2") format("woff2"),
+    url("MinecraftFivev2-Bold.woff") format("woff"),
+    url("MinecraftFivev2-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Minecraft Five";
+  src: url("MinecraftFivev2-Regular.woff2") format("woff2"),
+    url("MinecraftFivev2-Regular.woff") format("woff"),
+    url("MinecraftFivev2-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
